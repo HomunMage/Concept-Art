@@ -12,7 +12,7 @@ layout: base
         <div class="post-preview">
         <h2><a href="{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
         <div class="post-content">
-            <iframe src="{{ page.url }}" width="100%" frameborder="0"></iframe>
+            <iframe src="./{{ page.url }}" width="100%" frameborder="0"></iframe>
         </div>
         </div>
     {% endfor %}
