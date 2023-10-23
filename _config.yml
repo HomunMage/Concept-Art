@@ -22,8 +22,8 @@ title: AI-Mage concept art
 email: mail@posetmage.com
 description: >- # this means to ignore newlines until "baseurl:"
    "Concept Art"
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://posetmage.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/Concept-Art" # the subpath of your site, e.g. /blog
+url: "https://ai.posetmage.com/" # the base hostname & protocol for your site, e.g. http://example.com
 site_favicon: favicon.ico
 
 feed:
