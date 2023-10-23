@@ -2,7 +2,7 @@
 layout: base
 ---
 
-{{ page.content }}
+{{ page.content | markdownify }}
 
 <div class="gallery">
     {% for static_file in site.static_files %}
