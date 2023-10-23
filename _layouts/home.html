@@ -10,34 +10,48 @@ layout: base
     
     {% for page in sorted_pages limit: 10 %}
         <div class="post-preview">
-        <h2><a href="{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
-        <div class="post-content">
-            <iframe src="./{{ page.url }}" width="100%" frameborder="0"></iframe>
-        </div>
+            <h2><a href="{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
+            <div class="post-content">
+                <iframe src="./{{ page.url }}" data-id="{{ forloop.index }}" width="100%" frameborder="0"></iframe>
+            </div>
         </div>
     {% endfor %}
 </div>
     
 <script>
     function resize() {
-        let height = document.documentElement.scrollHeight;
-        parent.postMessage({
-            height: height,
-            frameId: 'uniqueFrameId' // or any other unique identifier for the iframe
-        }, '*');
+        let iframes = document.querySelectorAll("iframe");
+        iframes.forEach((iframe, index) => {
+            let height = iframe.contentDocument.documentElement.scrollHeight;
+            parent.postMessage({
+                height: height,
+                frameId: 'frame-' + (index + 1)
+            }, '*');
+        });
     }
     
-    window.onload = resize;
-    window.onresize = resize;
-</script>
+    window.addEventListener('load', resize);
+    window.addEventListener('resize', resize);
 
-<script>
     window.addEventListener('message', function(event) {
-        if (event.data && event.data.height && event.data.frameId === 'uniqueFrameId') {
-            let iframe = document.querySelector("iframe[src='" + event.source.location.pathname + "']");
+        if (event.data && event.data.height) {
+            let iframe = document.querySelector("iframe[data-id='" + event.data.frameId.replace('frame-', '') + "']");
             if (iframe) {
                 iframe.style.height = event.data.height + 'px';
             }
         }
     });
+</script>
+
+<script>
+    function postHeight() {
+        let height = document.documentElement.scrollHeight;
+        parent.postMessage({
+            height: height,
+            frameId: 'frame-' + document.querySelector("iframe").dataset.id
+        }, '*');
+    }
+
+    window.addEventListener('load', postHeight);
+    window.addEventListener('resize', postHeight);
 </script>
