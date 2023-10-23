@@ -1,4 +1,5 @@
 ---
-layout: gallery
-date: 2023-10-23
+layout: default
 ---
+
+date: 2023-10-23
