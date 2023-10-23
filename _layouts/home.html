@@ -6,6 +6,8 @@ layout: base
 {% assign index_pages = site.pages | where: "name", "index.md" %}
 {% assign sorted_pages = index_pages | sort: "path" | reverse %}
 
+<h3>Total index pages: {{ sorted_pages | size }}</h3>
+
 {% for page in sorted_pages limit: 10 %}
     <div class="post-preview">
     <h2><a href="./{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
