@@ -37,10 +37,8 @@ feed:
 
 #order
 header_pages:
-  - About.md
-  - Blog.md
-  - HandBook.md
-  - Contact.md
+  - List.md
+  
 
 
 
