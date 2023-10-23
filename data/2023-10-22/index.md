@@ -1,5 +1,3 @@
 ---
-layout: base
+layout: gallery
 ---
-
-date: 2023-10-23
