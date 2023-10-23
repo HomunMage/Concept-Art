@@ -1,0 +1,17 @@
+---
+layout: base
+---
+
+<div class="posts">
+  {% assign sorted_pages = site.pages | sort: "path" %}
+  {% for page in sorted_pages %}
+    {% if page.name == 'index.md' %}
+      <div class="post-preview">
+        <h2><a href="{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
+        <div class="post-content">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>

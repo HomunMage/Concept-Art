@@ -5,7 +5,7 @@ layout: base
 <div class="gallery">
     {% for static_file in site.static_files %}
         {% if static_file.path contains page.dir and (static_file.extname == '.jpg') %}
-            <img src="{{ static_file.path }}" alt="Image">
+            <img src="./Concept-Art/{{ static_file.path }}" alt="Image">
         {% endif %}
     {% endfor %}
 </div>
