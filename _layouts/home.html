@@ -11,9 +11,6 @@ layout: base
 {% for page in sorted_pages limit: 10 %}
     <div class="post-preview">
     <h2><a href="./{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
-    <div class="post-content">
-        {{ page.content | markdownify}}
-    </div>
     </div>
 {% endfor %}
 </div>
