@@ -2,6 +2,8 @@
 layout: base
 ---
 
+{{ page.content }}
+
 <div class="gallery">
     {% for static_file in site.static_files %}
         {% if static_file.path contains page.dir and (static_file.extname == '.jpg') %}
