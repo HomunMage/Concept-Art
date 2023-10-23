@@ -10,11 +10,34 @@ layout: base
     
     {% for page in sorted_pages limit: 10 %}
         <div class="post-preview">
-        <h2><a href="./{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
+        <h2><a href="{{ page.url }}">{{ page.dir | remove: '/' }}</a></h2>
         <div class="post-content">
-            {{ page.content  | markdownify }}
+            <iframe src="{{ page.url }}" width="100%" frameborder="0"></iframe>
         </div>
         </div>
     {% endfor %}
 </div>
     
+<script>
+    function resize() {
+        let height = document.documentElement.scrollHeight;
+        parent.postMessage({
+            height: height,
+            frameId: 'uniqueFrameId' // or any other unique identifier for the iframe
+        }, '*');
+    }
+    
+    window.onload = resize;
+    window.onresize = resize;
+</script>
+
+<script>
+    window.addEventListener('message', function(event) {
+        if (event.data && event.data.height && event.data.frameId === 'uniqueFrameId') {
+            let iframe = document.querySelector("iframe[src='" + event.source.location.pathname + "']");
+            if (iframe) {
+                iframe.style.height = event.data.height + 'px';
+            }
+        }
+    });
+</script>
