@@ -2,8 +2,6 @@
 layout: base
 ---
 
-{{ page.content | markdownify }}
-
 <div class="gallery">
     {% for static_file in site.static_files %}
         {% if static_file.path contains page.dir and (static_file.extname == '.jpg') %}
@@ -12,3 +10,6 @@ layout: base
         {% endif %}
     {% endfor %}
 </div>
+
+{{ page.content | markdownify }}
+
