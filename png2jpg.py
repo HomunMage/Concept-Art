@@ -9,7 +9,7 @@ def convert_png_to_jpg(root_folder):
                 png_path = os.path.join(dirpath, filename)
                 
                 # Clip the first 40 letters from the filename
-                new_filename = filename[:33]
+                new_filename = filename[:31]
                 
                 # Use the new_filename for the jpg_path
                 jpg_path = os.path.join(dirpath, new_filename[:-4] + ".jpg")

@@ -143,3 +143,22 @@ Here are two sets of UI icons for the medieval fantasy game, each within a 512x5
     
 
 You can download the images shown above and use them as UI elements in your game. Would you like any modifications or additional icons to be created?
+
+> 1 / 1
+> 
+> good, base one this concept, give me system UI icons like this method (include save, load, setting, .......)
+
+1 / 1
+
+DALL·E 3
+
+Created 2 images
+
+Here are two sets of system UI icons, each within a 512x512 resolution image, divided into 32x32 pixel tiles:
+
+*   The first set includes various system action icons such as save, load, settings, exit, and help. The designs have a rustic, medieval European feel, harmonizing with the overall art style of the game.
+    
+*   The second set also encompasses icons for essential system actions, keeping a cohesive aesthetic that aligns with the previously created UI icons and the game’s concept art.
+    
+
+You can download the images shown above for detailed viewing and implementation in your game’s user interface. Would you like any adjustments or additional icons to complement these sets?
