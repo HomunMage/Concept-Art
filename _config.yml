@@ -26,20 +26,13 @@ baseurl: "/Concept-Art" # the subpath of your site, e.g. /blog
 url: "https://ai.posetmage.com/" # the base hostname & protocol for your site, e.g. http://example.com
 site_favicon: favicon.ico
 
-feed:
-  title: "PosetMage"
-  description: "AI Arts"
-  author: "PosetMage"
-  email: "mail@posetmage.com"
-  url: "https://posetmage.com"
-  output: true
-
-
-#order
-header_pages:
-  - List.md
-  
-
+social:
+  - platform: envelope
+    url: mailto:aimageguild@gamil.com
+  - platform: youtube
+    url: https://youtube.com/@aimageguild
+  - platform: twitter
+    url: https://twitter.com/aimageguild
 
 
 # Build settings
@@ -54,7 +47,10 @@ plugins:
   - jekyll-redirect-from
   - jekyll-category-pages
   - jekyll-remote-theme
+  - jekyll-sitemap
   - jekyll-titles-from-headings
+  - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
