@@ -1,0 +1,5 @@
+---
+layout: gallery
+---
+
+Create a detailed and atmospheric illustration inspired by a dark fantasy world. The scene should feature a vast, open landscape filled with ancient ruins, imposing castles, and mysterious forests shrouded in fog. In the foreground, a lone warrior clad in intricate armor stands poised for battle, holding a large, rune-engraved sword. The warrior's cloak billows in the wind, revealing various amulets and relics. Above, a colossal tree with golden leaves dominates the skyline, casting an ethereal glow over the landscape. Surrounding the warrior are fantastical creatures, including a large wolf with luminous eyes and ethereal beings. The image should convey a sense of epic adventure, mystery, and the formidable challenges present in a world filled with magic and ancient lore.
